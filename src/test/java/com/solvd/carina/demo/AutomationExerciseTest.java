@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class AutomationExerciseTest implements IAbstractTest {
 
     @Test
-    @Maintainer("Gmamaldze")
+    @Maintainer("Gimamaldze")
     public void testLogin() {
         HomePageBase homepage  = initPage(getDriver(), HomePageBase.class);
         homepage.open();
@@ -23,7 +23,7 @@ public class AutomationExerciseTest implements IAbstractTest {
     }
 
     @Test
-    @Maintainer("Gmamaldze")
+    @Maintainer("Gimamaldze")
     public void failedTest() {
         HomePageBase homepage  = initPage(getDriver(), HomePageBase.class);
         homepage.open();
