@@ -2,6 +2,7 @@ package com.solvd.carina.demo.gui.pages.desktop;
 
 import com.solvd.carina.demo.gui.pages.common.HomePageBase;
 import com.solvd.carina.demo.gui.pages.common.LoginPageBase;
+import com.solvd.carina.demo.gui.pages.common.ProductsPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +15,10 @@ public class HomePage extends HomePageBase {
     private ExtendedWebElement loginButton;
 
     @FindBy(xpath = "//*[@class = 'fa fa-user']/..//*[text() = '%s']")
-    private ExtendedWebElement loginName;
+    private ExtendedWebElement userNameLabel;
+
+    @FindBy(xpath = "//*[@class = 'nav navbar-nav']//*[text() = ' Products']")
+    private ExtendedWebElement productsLabel;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -28,6 +32,12 @@ public class HomePage extends HomePageBase {
 
     @Override
     public boolean isUserLoggedIn(String userName) {
-        return loginName.format(userName).isElementPresent();
+        return userNameLabel.format(userName).isElementPresent();
+    }
+
+    @Override
+    public ProductsPageBase clickProductsButton() {
+        productsLabel.click();
+        return initPage(getDriver(), ProductsPageBase.class);
     }
 }

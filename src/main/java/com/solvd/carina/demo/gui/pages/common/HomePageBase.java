@@ -12,4 +12,6 @@ public abstract class HomePageBase extends AbstractPage {
     public abstract LoginPageBase clickLogInButton();
 
     public abstract boolean isUserLoggedIn(String userName);
+
+    public abstract ProductsPageBase clickProductsButton();
 }
