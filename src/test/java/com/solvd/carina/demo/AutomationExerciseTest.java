@@ -6,6 +6,8 @@ import com.solvd.carina.demo.gui.pages.common.ProductsPageBase;
 import com.solvd.carina.demo.gui.pages.common.SearchedProductsPageBase;
 import com.zebrunner.agent.core.annotation.Maintainer;
 import com.zebrunner.agent.core.annotation.TestCaseKey;
+import com.zebrunner.agent.core.annotation.XrayTestKey;
+import com.zebrunner.agent.core.annotation.ZephyrTestCaseKey;
 import com.zebrunner.carina.core.IAbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,6 +17,7 @@ public class AutomationExerciseTest implements IAbstractTest {
     @Test
     @Maintainer("Gmamaldze")
     @TestCaseKey("DEF-1081")
+    @XrayTestKey({"ZEB-17", "ZEB-63"})
     public void testLogin() {
         HomePageBase homepage  = initPage(getDriver(), HomePageBase.class);
         homepage.open();
@@ -29,6 +32,7 @@ public class AutomationExerciseTest implements IAbstractTest {
     @Test
     @Maintainer("Gmamaldze")
     @TestCaseKey("DEF-1088")
+    @ZephyrTestCaseKey("ZEB-53")
     public void testSearchProduct() {
         HomePageBase homepage  = initPage(getDriver(), HomePageBase.class);
         homepage.open();
