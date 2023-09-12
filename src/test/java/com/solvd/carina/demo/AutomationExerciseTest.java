@@ -16,10 +16,11 @@ import org.testng.annotations.Test;
 
 public class AutomationExerciseTest implements IAbstractTest {
 
-//    @BeforeSuite
-//    public void setup() {
+    @BeforeSuite
+    public void setup() {
+        TestCase.enableRealTimeSync();
 //        TestCase.setTestRunId("2765");
-//    }
+    }
 
     @Test
     @Maintainer("Gmamaldze")
