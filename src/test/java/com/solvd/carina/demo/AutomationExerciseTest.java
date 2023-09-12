@@ -18,7 +18,7 @@ public class AutomationExerciseTest implements IAbstractTest {
 
     @BeforeSuite
     public void setup() {
-        TestCase.enableRealTimeSync();
+//        TestCase.enableRealTimeSync();
 //        TestCase.setTestRunId("2765");
     }
 
