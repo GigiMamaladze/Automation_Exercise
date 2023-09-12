@@ -16,10 +16,10 @@ import org.testng.annotations.Test;
 
 public class AutomationExerciseTest implements IAbstractTest {
 
-    @BeforeSuite
-    public void setup() {
-        TestCase.setTestRunId("2765");
-    }
+//    @BeforeSuite
+//    public void setup() {
+//        TestCase.setTestRunId("2765");
+//    }
 
     @Test
     @Maintainer("Gmamaldze")
