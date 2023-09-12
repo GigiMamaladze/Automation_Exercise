@@ -8,11 +8,18 @@ import com.zebrunner.agent.core.annotation.Maintainer;
 import com.zebrunner.agent.core.annotation.TestCaseKey;
 import com.zebrunner.agent.core.annotation.XrayTestKey;
 import com.zebrunner.agent.core.annotation.ZephyrTestCaseKey;
+import com.zebrunner.agent.core.registrar.TestCase;
 import com.zebrunner.carina.core.IAbstractTest;
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class AutomationExerciseTest implements IAbstractTest {
+
+    @BeforeSuite
+    public void setup() {
+        TestCase.setTestRunId("2765");
+    }
 
     @Test
     @Maintainer("Gmamaldze")
