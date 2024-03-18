@@ -1,5 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite verbose="1" name="Carina Test - Automation Exercise" parallel="methods">
+
+    <parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
+    <parameter name="jenkinsRegressionMatrix" value="browser:chrome; browser:firefox"/>
+
     <test name="Automation Exercise Test">
         <classes>
             <class name="com.solvd.carina.demo.AutomationExerciseTest" />
