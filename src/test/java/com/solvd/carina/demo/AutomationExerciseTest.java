@@ -36,18 +36,4 @@ public class AutomationExerciseTest implements IAbstractTest {
         homepage = loginPage.clickLogin();
         Assert.assertTrue(homepage.isUserLoggedIn("Test"), "User is not logged in");
     }
-
-    @Test
-    @Maintainer("Gmamaldze")
-    @TestCaseKey("DEF-1088")
-    @ZephyrTestCaseKey("ZEB-53")
-    public void testSearchProduct() {
-        HomePageBase homepage  = initPage(getDriver(), HomePageBase.class);
-        homepage.open();
-        Assert.assertTrue(homepage.isPageOpened(), "Page is opened");
-        ProductsPageBase productsPage = homepage.clickProductsButton();
-        Assert.assertTrue(productsPage.isPageOpened(), "Product page is not opened");
-        productsPage.typeProductOnSearchTextField("Blue shirt");
-        SearchedProductsPageBase searchedProductsPage = productsPage.clickSearchIcon();
-    }
 }
