@@ -1,0 +1,6 @@
+<browsers>
+    <browser name="chrome">
+        <maxTotalInstances>5</maxTotalInstances>
+        <maxInstancesPerNode>2</maxInstancesPerNode>
+    </browser>
+</browsers>
