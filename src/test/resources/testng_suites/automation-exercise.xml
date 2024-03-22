@@ -21,4 +21,5 @@
             <class name="com.solvd.carina.demo.AutomationExerciseTest" />
         </classes>
     </test>
+
 </suite>
